@@ -1,0 +1,22 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,500;0,700;1,400;1,500;1,700&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+:root {
+    // Khai báo các biến mặc định
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1em;
+    text-rendering: optimizeSpeed;
+}
