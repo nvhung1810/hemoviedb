@@ -1,0 +1,369 @@
+// ------------------------ CARD STYLES 1 ------------------------------
+@mixin cdstl1-df {
+    width: 100%;
+    height: 100%;
+    min-width: 150px;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: var(--imageBorderRadius);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.medium {
+    margin-bottom: 32px;
+    width: calc(
+        (100vw - 80px - 260px - (var(--discoverColumnPadding) * var(--numberOfDiscoverColumns))) /
+            var(--numberOfDiscoverColumns)
+    );
+    max-width: calc(
+        (var(--maxPrimaryPageWidth) - 80px - 260px - (var(--discoverColumnPadding) * var(--numberOfDiscoverColumns))) /
+            var(--numberOfDiscoverColumns)
+    );
+    .cdstl1 {
+        @include cdstl1-df();
+        box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+        border: 1px solid rgba(var(--lightGrey), 1);
+    }
+}
+
+.small {
+    width: 150px;
+    margin-right: 20px;
+    background-color: transparent;
+    .cdstl1 {
+        @include cdstl1-df();
+        background-color: transparent;
+    }
+    .cdstl1__image {
+        min-height: calc(150px * 1.5);
+        height: calc(150px * 1.5);
+    }
+}
+
+.cdstl1 {
+    &__image {
+        box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+        border-radius: var(--imageBorderRadius);
+        min-height: calc(150px * 1.5);
+        background: #dbdbdb;
+        width: 100%;
+        display: inline-block;
+        height: calc(
+            (100vw - 80px - 260px - (var(--discoverColumnPadding) * var(--numberOfDiscoverColumns))) /
+                var(--numberOfDiscoverColumns) * 1.5
+        );
+        max-height: calc(
+            (
+                    var(--maxPrimaryPageWidth) - 80px - 260px -
+                        (var(--discoverColumnPadding) * var(--numberOfDiscoverColumns))
+                ) / var(--numberOfDiscoverColumns) * 1.5
+        );
+
+        overflow: hidden;
+        max-height: calc(
+            (
+                    var(--maxPrimaryPageWidth) - 80px - 260px -
+                        (var(--discoverColumnPadding) * var(--numberOfDiscoverColumns))
+                ) / var(--numberOfDiscoverColumns) * 1.5
+        );
+    }
+
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-block;
+    }
+
+    &__poster {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__options {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        z-index: 0;
+        opacity: 0.6;
+        &:hover {
+            opacity: 1;
+            filter: brightness(0) saturate(100%) invert(53%) sepia(33%) saturate(3054%) hue-rotate(156deg)
+                brightness(98%) contrast(99%);
+        }
+    }
+    &__click {
+        text-decoration: none;
+        font-weight: normal;
+        color: #000;
+    }
+
+    &__glyphicons {
+        font-size: 1.6em;
+        background-image: url('https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg');
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 1em;
+        min-height: 1em;
+        width: 1em;
+        height: 1em;
+        line-height: inherit;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: inherit;
+        box-sizing: border-box;
+    }
+    &__content {
+        padding-bottom: 0;
+        width: 100%;
+        padding: 26px 10px 12px 10px;
+        position: relative;
+        white-space: normal;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        .cdstl1__piechart {
+            position: absolute;
+            top: -16px;
+        }
+        .cdstl1__name {
+            font-weight: 700;
+            padding-top: 8px;
+            max-width: 150px;
+            &:hover {
+                color: rgba(var(--tmdbLightBlue), 1);
+            }
+        }
+        .cdstl1__time {
+            margin: 0;
+            padding: 2px 0;
+            opacity: 0.8;
+        }
+    }
+}
+// ------------------------ CARD STYLES 2 ------------------------------
+.cdstl2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    height: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: var(--imageBorderRadius);
+    align-items: flex-start;
+    &__image {
+        min-width: 300px;
+        width: 300px;
+        height: calc(300px / 1.78);
+        transition: all 0.2s ease-in-out;
+        transform: scale(1);
+        overflow: hidden;
+        &:hover {
+            transform: scale(1.05);
+        }
+        &:hover .glyphicons_v2 {
+            transform: scale(1.2);
+        }
+    }
+    &__wrapper {
+        display: block;
+        border-radius: var(--imageBorderRadius);
+        overflow: hidden;
+        position: relative;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__trainer {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__backdrop {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    &__play {
+        width: 300px;
+        height: calc(300px / 1.78);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4em;
+    }
+
+    @mixin glyphicons_v2-setup {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 1em;
+        min-height: 1em;
+        width: 1em;
+        height: 1em;
+        line-height: inherit;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: inherit;
+        box-sizing: border-box;
+    }
+
+    &__glyphicons {
+        transition: all 0.2s ease-in-out;
+        background-image: url('https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-175-play-806cb05551791b8dedd7f8d38fd3bd806e2d397fcfeaa00a5cc9129f0819fd07.svg');
+        @include glyphicons_v2-setup();
+        filter: invert(1);
+    }
+    &__options {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        z-index: 0;
+        opacity: 0.6;
+
+        &:hover {
+            opacity: 1;
+            filter: brightness(0) saturate(100%) invert(53%) sepia(33%) saturate(3054%) hue-rotate(156deg)
+                brightness(98%) contrast(99%);
+        }
+
+        .cdstl2__click {
+            text-decoration: none;
+            font-weight: normal;
+            color: #000;
+        }
+
+        .cdstl2__glyphiconsv3 {
+            font-size: 1.6em;
+            background-image: url('https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg');
+            @include glyphicons_v2-setup();
+        }
+    }
+
+    &__content {
+        width: 100%;
+        padding: 10px 10px 12px 10px;
+        position: relative;
+        white-space: normal;
+        display: flex;
+        align-content: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .cdstl2__name {
+            font-weight: 700;
+            padding-top: 8px;
+            font-size: 1.2em;
+
+            &:hover {
+                color: rgba(var(--tmdbLightBlue), 1);
+            }
+        }
+        .cdstl2__description {
+            margin: 0;
+            padding: 2px 0 12px 0;
+            opacity: 0.8;
+        }
+    }
+}
+// ------------------------ CARD STYLES 3 ------------------------------
+.cdstl3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    border: 1px solid rgba(var(--lightGrey), 1);
+    padding-bottom: 10px;
+    border-radius: var(--imageBorderRadius);
+    overflow: hidden;
+    min-width: 140px;
+    width: 140px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+    list-style: none;
+    .cdstl3__link {
+        min-width: 138px;
+        width: 138px;
+        height: 175px;
+        display: block;
+        text-decoration: none;
+        font-weight: normal;
+    }
+    .cdstl3__profile {
+        width: 100%;
+        height: 100%;
+    }
+
+    .cdstl3__name {
+        padding: 0 10px;
+        font-weight: 700;
+    }
+    .cdstl3__charector {
+        margin-bottom: 0;
+        padding: 0 10px;
+        font-size: 0.9em;
+    }
+}
+// ------------------------ CARD STYLES 4 ------------------------------
+.cdstl4 {
+    display: inline-block;
+    float: none;
+    width: 250px;
+    margin: 0 15px 0 0;
+    &__content {
+        line-height: 0;
+        overflow: hidden;
+    }
+    &__backdrop {
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 141px;
+        border-radius: var(--imageBorderRadius);
+        position: relative;
+        outline: none;
+    }
+    &__movie {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4px;
+    }
+    &__title {
+        font-weight: 400;
+        font-size: 1em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        padding-right: 20px;
+    }
+    &__voteAverage {
+        padding-top: 0;
+        margin-right: 0;
+        display: inline-flex;
+        align-items: center;
+    }
+}

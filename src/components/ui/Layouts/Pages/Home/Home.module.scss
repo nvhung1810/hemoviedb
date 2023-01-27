@@ -1,0 +1,187 @@
+.inner_content {
+    width: 100%;
+
+    min-height: 300px;
+    height: calc(100vh / 2.5);
+    max-height: 360px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-image: linear-gradient(to right, rgba(3, 37, 65, 0.8) 0%, rgba(3, 37, 65, 0) 100%),
+        url('https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,00192f,00baff)/uozb2VeD87YmhoUP1RrGWfzuCrr.jpg');
+}
+
+.content_wrapper {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.media {
+    width: 100%;
+}
+
+.welcome {
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.description {
+    font-size: 2em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.input {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    font-size: 1.1em;
+    color: var(--font-color);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.search {
+    margin-top: 48px;
+}
+
+.inner_search_form {
+    position: relative;
+    .btn__search {
+        position: absolute;
+        right: 0;
+        transform: translateY(-100%);
+    }
+}
+
+.taw_2023 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    min-height: 300px;
+    height: calc(100vh / 2.5);
+    max-height: 360px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    background-image: url('https://image.tmdb.org/t/p/w1920_and_h600_multi_faces/rGbRnRvkmrSub07ty89Vnlsh6UX.jpg');
+    .media {
+        height: 100%;
+        background-color: rgba(45, 28, 111, 0.5);
+    }
+    .content_wrapper {
+        flex-direction: column;
+    }
+    .header {
+        .taw {
+            font-weight: 700;
+            font-size: 4em;
+            margin: 0;
+            text-transform: uppercase;
+            border-bottom: 1px solid #fff;
+            width: fit-content;
+        }
+    }
+    .description {
+        padding-top: 12px;
+        font-size: 1.3em;
+        font-weight: 300;
+    }
+}
+
+// Trending
+.trending {
+    &__header {
+        padding-left: 40px;
+    }
+
+    &__content {
+        background-image: url('https://www.themoviedb.org/assets/2/v4/misc/trending-bg-39afc2a5f77e31d469b25c187814c0a2efef225494c038098d62317d923f8415.svg');
+        background-position: 50% 134px;
+        background-size: var(--maxPrimaryPageWidth);
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+        align-content: flex-start;
+        width: 100%;
+        position: relative;
+        box-sizing: border-box;
+        height: 379px;
+        padding-left: 40px;
+        transition: height 0.5s linear;
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: rgb(219, 219, 219);
+        }
+    }
+    .shadow {
+        position: sticky;
+        height: 100%;
+        right: -13px;
+        background-color: transparent;
+        box-shadow: 0px 0px 48px 48px #fff;
+    }
+}
+
+// trailer
+.trailer {
+    background-image: url('https://www.themoviedb.org/t/p/w1920_and_h427_multi_faces/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    transition: all 0.5s;
+    max-width: var(--maxPrimaryPageWidth);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    .trailer__wrap {
+        background: linear-gradient(to right, rgba(var(--tmdbDarkBlue), 0.75) 0%, rgba(var(--tmdbDarkBlue), 0.75) 100%);
+        width: 100%;
+    }
+    &__header,
+    &__content {
+        padding-left: 40px;
+    }
+}
+
+// LEADER BOARD
+.wrapper__leaderboard {
+    padding: 20px 0 60px 0;
+    .wrapper__chart {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .chart {
+            width: 50%;
+        }
+    }
+}

@@ -1,0 +1,114 @@
+@mixin app--main {
+    border-radius: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #101317;
+}
+
+@mixin progressbar--df {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0px;
+    position: relative;
+}
+
+@mixin progressbar_inside--df {
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #101317;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$width-App-main-big: 68px;
+$height-App-main-big: 68px;
+$width-App-main-small: 38px;
+$height-App-main-small: 38px;
+
+.big {
+    @include app--main();
+    width: $width-App-main-big;
+    height: $height-App-main-big;
+
+    .progressbar {
+        @include progressbar--df();
+        width: calc($width-App-main-big - 6px);
+        height: calc($height-App-main-big - 6px);
+    }
+
+    .progressbar_inside {
+        @include progressbar_inside--df();
+        width: calc($width-App-main-big - 14px);
+        height: calc($height-App-main-big - 14px);
+    }
+}
+
+.small {
+    @include app--main();
+    width: $width-App-main-small;
+    height: $height-App-main-small;
+
+    .progressbar {
+        @include progressbar--df();
+        width: calc($width-App-main-small - 2px);
+        height: calc($height-App-main-small - 2px);
+    }
+
+    .progressbar_inside {
+        @include progressbar_inside--df();
+        width: calc($width-App-main-small - 10px);
+        height: calc($height-App-main-small - 10px);
+    }
+}
+
+.user_comp {
+    width: 100%;
+    height: 100%;
+    /* padding: 10px 7px 10px 2px; */
+    /* padding-left: 20px; */
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.action_class {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    /* margin-left: 10px; */
+}
+
+.user_comp_step {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+.value__percent {
+    color: white;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.percent {
+    font-size: 0.2em;
+    color: white;
+    position: relative;
+    top: -4px;
+    right: 0px;
+}

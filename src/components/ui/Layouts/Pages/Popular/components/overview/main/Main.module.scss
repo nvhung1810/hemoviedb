@@ -1,0 +1,531 @@
+// NAVBAR
+.scroller_wrap {
+    border-bottom: 1px solid var(--primaryColor);
+    width: 100%;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.dropdown_menu {
+    height: 100%;
+    background-color: #fff;
+    font-weight: 600;
+    flex-wrap: nowrap;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    visibility: visible;
+    background: #fff;
+    margin: 0;
+    border-color: #dee2e6;
+    color: #212529;
+}
+.k-state-default {
+    padding: 0 20px;
+    z-index: 0;
+    border-bottom: 4px solid rgba(var(--tmdbLightBlue), 1);
+    margin-right: 40px;
+    color: #000;
+    font-weight: 400;
+    border-width: 0;
+    outline: 0;
+    display: flex;
+    flex: 0 0 auto;
+    position: relative;
+    user-select: none;
+    cursor: default;
+}
+.k-link {
+    padding: 0;
+    outline: 0;
+    color: inherit;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
+}
+.k-icon {
+    padding: 0 0 4px 8px;
+}
+
+// ----------------------------------------------------------------
+.hdoverview {
+    border-bottom: 1px solid var(--primaryColor);
+    background-position: left calc((50vw - 170px) - 340px) top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/r9PkFnRUIthgBp2JZZzD380MWZy.jpg');
+    width: 100%;
+    position: relative;
+    .hdoverview__keyboard {
+        background-image: linear-gradient(
+            to right,
+            rgba(31.5, 31.5, 52.5, 1) calc((50vw - 170px) - 340px),
+            rgba(31.5, 31.5, 52.5, 0.84) 30%,
+            rgba(31.5, 31.5, 52.5, 0.84) 100%
+        );
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .hdoverview__column {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+        max-width: var(--maxPrimaryPageWidth);
+        width: 100%;
+        z-index: 0;
+        box-sizing: border-box;
+    }
+    .images {
+        color: #fff;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .name__header {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 2.2rem;
+        padding-top: 20px;
+    }
+    .poster_wrapper {
+        color: #fff;
+        border-width: 0px;
+        min-width: 300px;
+        width: 300px;
+        height: 450px;
+        overflow: hidden;
+        border-radius: var(--imageBorderRadius);
+    }
+    .poster {
+        color: #fff;
+        display: block;
+        min-width: 300px;
+        width: 300px;
+        height: 450px;
+        position: relative;
+        top: 0;
+        left: 0;
+        &__image {
+            width: 100%;
+            min-width: 100%;
+            height: 100%;
+        }
+        &__img {
+            display: block;
+            width: 100%;
+            min-width: 100%;
+            height: 100%;
+            min-height: 100%;
+            border-width: 0px;
+            outline: none;
+        }
+    }
+
+    .zoom {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        border-radius: var(--imageBorderRadius);
+        visibility: hidden;
+        opacity: 0;
+        transition: linear 0.2s;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+    }
+
+    .tag {
+        opacity: 0.8;
+        font-weight: 400;
+        padding: 0 8px;
+    }
+
+    .play {
+        padding-left: 4px;
+    }
+
+    .pie:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: transform 0.2s;
+    }
+
+    .glyphicons_v2 {
+        margin-right: 6px;
+        background-image: url('https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-159-thumbnails-list-white-c260ea972eebf812289fd3c41d0d2c1dff33ecbcd62be13fba8eeaf9de173789.svg');
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 1em;
+        min-height: 1em;
+        width: 1em;
+        height: 1em;
+        line-height: inherit;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: inherit;
+        box-sizing: border-box;
+    }
+    .header_poster_wrapper {
+        display: flex;
+        color: #fff;
+    }
+    .header__poster {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: center;
+        box-sizing: border-box;
+        padding-left: 40px;
+    }
+    .title {
+        width: 100%;
+        margin-bottom: 24px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .facts {
+        display: flex;
+    }
+    .certification {
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        color: rgba(255, 255, 255, 0.6);
+        display: inline-flex;
+        white-space: nowrap;
+        align-items: center;
+        align-content: center;
+        padding: 0.06em 4px 0.15em 4px !important;
+
+        line-height: 1;
+        border-radius: 2px;
+        margin-right: 7px;
+    }
+    .release {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .genres {
+        padding-left: 20px;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .runtime {
+        padding-left: 20px;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .auto {
+        list-style: none;
+        margin-bottom: 20px;
+        margin-top: 0;
+        width: 100%;
+        height: 68px;
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+        justify-content: flex-start;
+    }
+    .chart {
+        background: transparent;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        height: 68px;
+        padding: 0 3px;
+        margin-right: 20px;
+    }
+    .text {
+        font-weight: 700;
+        margin-left: 6px;
+        white-space: pre-line;
+    }
+    .tooltip {
+        margin-right: 20px;
+    }
+
+    @mixin no_click {
+        box-sizing: border-box;
+        border-radius: 50%;
+        height: 46px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 16px;
+    }
+    .no_click {
+        @include no_click();
+        background: rgba(var(--tmdbDarkBlue), 1);
+        width: 46px;
+    }
+    .no_click--play {
+        @include no_click();
+
+        background: transparent;
+        width: 24px;
+    }
+
+    .video {
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .tagline {
+        margin-bottom: 0;
+        font-size: 1.1em;
+        font-weight: 400;
+        font-style: italic;
+        opacity: 0.7;
+        margin-top: 0;
+    }
+
+    .people {
+        margin-top: 20px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        list-style-type: none;
+        list-style-position: inside;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .profile {
+        background-color: transparent;
+        height: auto;
+        margin-bottom: 0;
+        width: 33%;
+        flex-basis: 33%;
+        text-align: left;
+        margin-right: 0;
+        box-sizing: border-box;
+        padding-right: 20px;
+        &__name {
+            font-weight: 700;
+            margin: 2px 0;
+        }
+        &__character {
+            font-size: 0.9em;
+            margin: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+//  CAST
+.cast {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    margin: 0 40px;
+    .casd__wrap {
+        display: flex;
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: rgb(219, 219, 219);
+        }
+    }
+    .cast__link {
+        font-weight: 700;
+        font-size: 1em;
+    }
+}
+
+//Social
+.social {
+    margin: 0 40px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+// Media
+
+.media {
+    margin: 0 40px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    .media__wrap {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .media__content {
+        display: flex;
+        width: 100%;
+        border-radius: var(--imageBorderRadius);
+        height: 300px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        font-size: 0;
+        padding-bottom: 10px;
+    }
+    .media__video {
+        width: 533px;
+        height: 300px;
+        border: none;
+        margin-top: 0;
+        border-radius: var(--imageBorderRadius);
+        display: flex;
+        align-items: flex-start;
+        box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+        background-color: #fff;
+    }
+    .media__wrapper {
+        background-image: url('https://i.ytimg.com/vi/xgZLXyqbYOc/hqdefault.jpg');
+        width: 533px;
+        height: 300px;
+        min-width: 0;
+        box-sizing: border-box;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .media__play_trailer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .media__background {
+        width: 67px;
+        height: 67px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    .media__play {
+        width: 50%;
+        height: 50%;
+        left: 1px;
+        transition: opacity 200ms linear;
+        filter: invert(1);
+        background-image: url('https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-175-play-806cb05551791b8dedd7f8d38fd3bd806e2d397fcfeaa00a5cc9129f0819fd07.svg');
+        position: relative;
+        top: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 1em;
+        min-height: 1em;
+        line-height: inherit;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: inherit;
+        box-sizing: border-box;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+    .media__backdrop {
+        width: 533px;
+        height: 300px;
+        min-width: 533px;
+        min-height: 300px;
+    }
+
+    .media__poster {
+        width: 200px;
+        height: 300px;
+    }
+}
+
+// ----------------------- COLLECTION -----------------------
+.collection {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    margin: 0 40px;
+    border-bottom: 1px solid #ccc;
+
+    &__wrapper {
+        width: 100%;
+        border-radius: var(--imageBorderRadius);
+        overflow: hidden;
+    }
+    &__header {
+        color: var(--white);
+        background-image: linear-gradient(
+                to right,
+                rgba(var(--tmdbDarkBlue), 1) 0%,
+                rgba(var(--tmdbDarkBlue), 0.6) 100%
+            ),
+            url('https://www.themoviedb.org/t/p/w1440_and_h320_multi_faces/feU1DWV5zMWxXUHJyAIk3dHRQ9c.jpg');
+        background-size: cover;
+        background-position: 50% 50%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 258px;
+        overflow: hidden;
+        background-color: #ccc;
+        background-repeat: no-repeat;
+        padding: 0 20px;
+    }
+    &__title {
+        font-size: 1.8em;
+        font-weight: 600;
+        padding: 0;
+        margin: 0;
+    }
+    &__description {
+        font-size: 1em;
+        margin: 0;
+    }
+    &__button {
+        margin-bottom: 0;
+        font-size: 1.1em;
+        color: #fff;
+        border-color: var(--primaryColor);
+        background-color: var(--primaryColor);
+        border-radius: 20px;
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 20px;
+        margin: 20px 0 0 0;
+        transition: linear 0.1s;
+        text-transform: uppercase;
+    }
+}
+
+.recommendations {
+    margin: 0 40px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}

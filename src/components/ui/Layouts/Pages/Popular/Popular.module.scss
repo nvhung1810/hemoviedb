@@ -1,0 +1,73 @@
+.box {
+    padding: 30px 40px;
+    .box__header {
+        height: 32px;
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+}
+
+.sp__wrapper {
+    height: 100vh;
+    .sp__wrap {
+        min-width: 260px;
+        width: 260px;
+        border: 1px solid #e3e3e3;
+        border-radius: var(--imageBorderRadius);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        font-size: 1.1em;
+        font-weight: 700;
+        box-shadow: var(--default-boxshadow);
+        .sp__name {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            align-items: center;
+            padding: 14px 16px;
+        }
+        .sp__icon {
+            position: relative;
+            top: 0;
+            left: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 1em;
+            min-height: 1em;
+            width: 1em;
+            height: 1em;
+            margin-right: 10px;
+            line-height: inherit;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: inherit;
+            box-sizing: border-box;
+            .glyphicons_v2 {
+                background-image: url('https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-224-chevron-right-d1f88a6c15e68190c3b47e1ee4f39fe47f4b69f4966ca7c250c2e14cfa689a04.svg');
+                display: flex;
+                justify-content: space-between;
+                height: 100%;
+                width: 100%;
+                align-items: center;
+                overflow: hidden;
+                /* padding-right: 26px; */
+                font-size: 1.1em;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.cp__wrapper {
+    .cp__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-left: 20px;
+    }
+}

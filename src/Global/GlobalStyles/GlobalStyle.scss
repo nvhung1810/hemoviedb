@@ -2,6 +2,40 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,500;0,700;1,400;1,500;1,700&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
 :root {
     // Khai báo các biến mặc định
+    --white: #fff;
+    --font-color: #333;
+    --font-size-default: 0.9em;
+
+    //----------------------------------------------
+    --primaryColor: rgba(31.5, 31.5, 52.5, 1);
+    --primaryColorContrast: #ffffff;
+    --color-primary-dark: rgb(3, 37, 65);
+    --scrollerGrey: 219, 219, 219;
+    --lightGrey: 227, 227, 227;
+    --darkerGrey: 200, 200, 200;
+    --tmdbDarkBlue: 3, 37, 65;
+    --tmdbLightBlue: 1, 180, 228;
+    --tmdbLighterGreen: 192, 254, 207;
+    --tmdbLightGreen: 30, 213, 169;
+    --tmdbLogoGreen: 144, 206, 161;
+    --tmdbLogoOrange: 253, 193, 112;
+    --tmdbLogoRed: 217, 59, 99;
+    --accountSilver: 149, 149, 149;
+    --accountPink: 234, 20, 140;
+    --accountPurple: 128, 91, 231;
+    --accountGreen: 1, 210, 119;
+    --accountTeal: 1, 198, 172;
+    --accountLightBlue: 1, 180, 228;
+    --accountBlue: 1, 119, 210;
+    --accountOrange: 210, 119, 1;
+    --accountYellow: 210, 144, 1;
+    --accountRed: 212, 2, 66;
+    --imageBorderRadius: 8px;
+    --maxPrimaryPageWidth: 1400px;
+    --discoverColumnPadding: 30px;
+    --numberOfDiscoverColumns: 5;
+
+    --default-boxshadow: 0 2px 8px rgb(0 0 0 / 10%);
 }
 
 * {
@@ -9,7 +43,45 @@
 }
 
 html {
-    font-size: 62.5%;
+    // font-size: 62.5%;
+    text-rendering: optimizeSpeed; // tối ưu tốc độ hiển thị text
+    overflow-y: overlay;
+}
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.06);
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.06);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 body {
@@ -19,4 +91,5 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1em;
     text-rendering: optimizeSpeed;
+    margin: 0;
 }

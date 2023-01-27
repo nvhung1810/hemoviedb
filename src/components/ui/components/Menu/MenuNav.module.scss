@@ -1,0 +1,52 @@
+// ---------------------MENU --------------------
+.nav__item--menu {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 4px;
+    top: 28px;
+    width: 174px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+    .menu__list {
+        max-height: 244px;
+        overflow: auto;
+        font-style: none;
+        list-style: none;
+        padding-left: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        display: block;
+        transform: translateY(0px);
+        padding-left: 0;
+    }
+    .menu__item {
+        padding: 3px 1.5rem;
+        padding-right: calc(3rem + 16px);
+        &:hover {
+            color: #16181b;
+            background-color: #f8f9fa;
+        }
+    }
+}
+
+.show__plus {
+    position: absolute;
+    color: var(--font-color);
+    width: 218px;
+    padding: 12.8px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #fff;
+    top: 42px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+    left: -87px;
+    .card {
+        width: 12px;
+        position: absolute;
+        top: -8px;
+        left: 44%;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid #fff;
+    }
+}
