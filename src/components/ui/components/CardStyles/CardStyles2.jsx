@@ -59,7 +59,7 @@ function CardStyles2() {
                     <p className={cx('cdstl2__description')}>The Weeks Ahead Trailer</p>
                 </div>
             </div>
-            <VideoModal isOpen={isOpen} close={handleShowVideo} />
+            {/* <VideoModal isOpen={isOpen} close={handleShowVideo} /> */}
         </div>
     );
 }

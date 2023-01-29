@@ -3,8 +3,7 @@ import moment from 'moment/moment';
 import LinkOverViewMovie, { srcImgLinkDefault, srcImgSetDefault } from '~/components/logic/linkOverviewMovie';
 import PieChart from '../Chart/PieChart/PieChart';
 import styles from './CardStyles.module.scss';
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -59,9 +58,9 @@ function CardStyles1({ list, small = false, medium = false }) {
                                 data-media-type="movie"
                                 data-role="tooltip"
                             >
-                                <a className={cx('cdstl1__click')} href="#">
+                                <div className={cx('cdstl1__click')} href="#">
                                     <div className={cx('cdstl1__glyphicons')}></div>
-                                </a>
+                                </div>
                             </div>
                         </div>
                         <div className={cx('cdstl1__content')}>
@@ -70,9 +69,9 @@ function CardStyles1({ list, small = false, medium = false }) {
                             </div>
 
                             <div className={cx('cdstl1__name')}>
-                                <div to={LinkOverViewMovie(item.id, item.original_title)} title={item.title}>
+                                <Link to={LinkOverViewMovie(item.id, item.original_title)} title={item.title}>
                                     {item.title}
-                                </div>
+                                </Link>
                             </div>
                             <p className={cx('cdstl1__time')}>{changeTime(item.release_date)}</p>
                         </div>

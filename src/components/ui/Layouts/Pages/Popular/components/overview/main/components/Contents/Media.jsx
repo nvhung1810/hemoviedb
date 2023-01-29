@@ -1,6 +1,6 @@
-import HeaderStyles2 from '../../../../../../../components/Header/HeaderStyles3';
+import HeaderStyles2 from '../../../../../../../../components/Header/HeaderStyles3';
 import classNames from 'classnames/bind';
-import styles from './../Main.module.scss';
+import styles from './../../Main.module.scss';
 
 import { useState } from 'react';
 import VideoModal from '~/components/ui/components/Modal/modalVideo/VideoModal';
@@ -53,7 +53,7 @@ function Media() {
                     </div>
                 </div>
             </div>
-            <VideoModal isOpen={isOpen} close={handleShowVideo} keyVideo="RqrXhwS33yc" />
+            {/* <VideoModal isOpen={isOpen} close={handleShowVideo} keyVideo="RqrXhwS33yc" /> */}
         </div>
     );
 }

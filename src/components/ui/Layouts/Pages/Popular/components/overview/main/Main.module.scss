@@ -1,3 +1,7 @@
+.contents {
+    justify-content: center;
+}
+
 // NAVBAR
 .scroller_wrap {
     border-bottom: 1px solid var(--primaryColor);
@@ -63,7 +67,6 @@
     background-position: left calc((50vw - 170px) - 340px) top;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/r9PkFnRUIthgBp2JZZzD380MWZy.jpg');
     width: 100%;
     position: relative;
     .hdoverview__keyboard {

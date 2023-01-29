@@ -1,8 +1,9 @@
 import classNames from 'classnames/bind';
-import styles from './../Main.module.scss';
+import styles from './../../Main.module.scss';
+
 // ----------------------------------------------------------------
 import CardStyles4 from '~/components/ui/components/CardStyles/CardStyles4';
-import HeaderStyles2 from '../../../../../../../components/Header/HeaderStyles3';
+import HeaderStyles2 from '../../../../../../../../components/Header/HeaderStyles3';
 
 const cx = classNames.bind(styles);
 

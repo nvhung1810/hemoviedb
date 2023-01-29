@@ -1,13 +1,13 @@
 import PieChart from '~/components/ui/components/Chart/PieChart/PieChart';
 import classNames from 'classnames/bind';
-import styles from './../Main.module.scss';
+import styles from './../../Main.module.scss';
 
 import { useState } from 'react';
 import VideoModal from '~/components/ui/components/Modal/modalVideo/VideoModal';
-import Poster from './Header/Poster';
-import Tooltip from './Header/Tooltip';
+import Poster from './Poster';
+import Tooltip from './Tooltip';
 import moment from 'moment/moment';
-import Profile from './Header/Profile';
+import Profile from './Profile';
 
 const cx = classNames.bind(styles);
 
@@ -26,7 +26,7 @@ function HeaderMainOverview({ listData, listCast }) {
         else {
             const listVideos = listVideoMovies.results;
             listVideos.forEach((item) => {
-                const b = item.name.toLowerCase().includes('Official Trailer'.toLowerCase());
+                const b = item.name.toLowerCase().includes('Trailer'.toLowerCase());
                 if (b === true) listVideoTrailer.push(item);
                 else return;
             });
@@ -54,8 +54,14 @@ function HeaderMainOverview({ listData, listCast }) {
 
     const videoTrailerNearCurrentTime = getVideoTrailer();
 
+    const linkBackDropPath = (backdrop_path) => {
+        return `https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${backdrop_path}`;
+    };
     return (
-        <div className={cx('hdoverview')}>
+        <div
+            className={cx('hdoverview')}
+            style={{ backgroundImage: `url(${linkBackDropPath(listData.backdrop_path)})` }}
+        >
             <div className={cx('hdoverview__keyboard')}>
                 <div className={cx('hdoverview__column')}>
                     <section className={cx('images')}>
@@ -137,7 +143,7 @@ function HeaderMainOverview({ listData, listCast }) {
                 </div>
             </div>
             <div>
-                <VideoModal isOpen={isOpen} close={handleShowVideo} keyVideo={isVideos} />
+                {isVideos === '' ? '' : <VideoModal isOpen={isOpen} close={handleShowVideo} keyVideo={isVideos} />}
             </div>
         </div>
     );

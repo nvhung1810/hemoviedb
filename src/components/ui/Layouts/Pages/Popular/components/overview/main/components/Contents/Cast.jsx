@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import styles from './../Main.module.scss';
+import styles from './../../Main.module.scss';
 import CardStyles3 from '~/components/ui/components/CardStyles/CardStyles3';
 import HeaderStyles2 from '~/components/ui/components/Header/HeaderStyles2';
 

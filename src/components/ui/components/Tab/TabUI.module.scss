@@ -1,0 +1,19 @@
+.tabUI {
+    .tabUI__wrap {
+        display: flex;
+        align-items: center;
+    }
+    .tabUI__header {
+        font-weight: 700;
+        font-size: 1.3em;
+        padding: 8px 0;
+        margin-right: 34px;
+    }
+    .tabUI__tab {
+        max-width: 100px;
+        padding: 0;
+    }
+    .tabUI__tabPanel {
+        padding: 24px 0;
+    }
+}

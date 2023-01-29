@@ -70,4 +70,13 @@
         width: 100%;
         padding-left: 20px;
     }
+    .cp__button {
+        width: 100%;
+        height: 48px;
+        border-radius: 8px;
+        background-color: rgb(1, 180, 228);
+        font-size: 1em;
+        font-weight: 700;
+        color: var(--white);
+    }
 }
