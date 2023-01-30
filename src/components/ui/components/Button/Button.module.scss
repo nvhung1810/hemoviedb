@@ -3,13 +3,16 @@
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    min-width: 100px;
     padding: 9px 16px;
     border-radius: 4px;
     cursor: pointer;
     background-color: transparent;
     user-select: none;
     color: var(--white);
+
+    &.fullWidth {
+        width: 100%;
+    }
 
     + .wrapper {
         margin-left: 16px;
@@ -61,6 +64,18 @@
     }
 }
 
+.dark {
+    color: #333;
+    background-color: rgb(229, 229, 229);
+    border: 1px solid #ccc;
+}
+
+.black {
+    color: #fff;
+    background-color: rgb(32, 32, 74);
+    border: none;
+}
+
 .outline {
     color: var(--primary-color);
     border-color: var(--primary-color);
@@ -81,7 +96,7 @@
 // button size
 
 .small {
-    padding: 4px 20px;
+    padding: 4px 10px;
     line-height: 20px;
     transition: linear 0.1s;
 }

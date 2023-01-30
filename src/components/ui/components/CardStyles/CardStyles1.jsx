@@ -46,7 +46,7 @@ function CardStyles1({ list, small = false, medium = false }) {
                                         loading="lazy"
                                         className={cx('cdstl1__poster')}
                                         src={srcImgLinkDefault(item.poster_path)}
-                                        srcSet={srcImgSetDefault(item.poster_path)}
+                                        // srcSet={srcImgSetDefault(item.poster_path)}
                                         alt=""
                                     />
                                 </div>

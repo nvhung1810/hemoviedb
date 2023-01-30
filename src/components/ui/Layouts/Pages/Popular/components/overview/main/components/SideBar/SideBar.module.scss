@@ -1,0 +1,104 @@
+.sideBar {
+    margin: 20px 0 20px 20px;
+    .sideBar__iconWrap {
+        display: flex;
+    }
+}
+
+// Card Icon
+.cdIcon {
+    height: 30px;
+    margin-bottom: 30px;
+    padding-right: 10px;
+    .cdIcon__link {
+        display: block;
+        font-size: 1.9em;
+        text-decoration: none;
+        font-weight: normal;
+    }
+    .cdIcon__icon {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 1em;
+        min-height: 1em;
+        width: 1em;
+        height: 1em;
+        line-height: inherit;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: inherit;
+        box-sizing: border-box;
+    }
+}
+// Card DESCRIPTIONS
+.cdDescription {
+    white-space: normal;
+    margin: 0 0 20px 0;
+    font-size: 1em;
+
+    .cd__header {
+        font-weight: 700;
+        font-size: 1em;
+        padding: 10px 0;
+    }
+
+    .cdDescription__strong {
+        display: block;
+        font-weight: 600;
+    }
+}
+
+.header__df {
+    font-size: 1.1em;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+.df__listButton {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    .df__itemButton {
+        padding: 4px 4px 0 0;
+    }
+}
+
+.cdProfile {
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    &__avatar {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    &__info {
+        padding-left: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__edit {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+        font-weight: 600;
+    }
+    &__name {
+        font-weight: 300;
+    }
+}
+
+.content__score,
+.cdProfile__wrap {
+    padding-top: 20px;
+}

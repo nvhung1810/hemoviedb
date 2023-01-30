@@ -3,7 +3,7 @@ import styles from './HeaderStyles.module.scss';
 
 const cx = classNames.bind(styles);
 
-function HeaderStyles1({ selectorDark, selectorLight, className }) {
+function HeaderStyles1({ selectorDark, selectorLight, className, title }) {
     const classes = cx('wrapper', {
         selectorDark,
         selectorLight,
@@ -12,7 +12,6 @@ function HeaderStyles1({ selectorDark, selectorLight, className }) {
 
     return (
         <div className={cx('hdstyles1')}>
-            <h2>Trending</h2>
             <div className={cx('hdstyles1__wrapper')}>
                 <div className={classes}>
                     <div className={cx('hdstyles1__wrap')}>
@@ -24,22 +23,9 @@ function HeaderStyles1({ selectorDark, selectorLight, className }) {
                                     data-panel="trending_scroller"
                                     data-group="today"
                                 >
-                                    Today <span className={cx('hdstyles1__name')}></span>
+                                    {title}
                                 </div>
-                            </h3>
-                            <div className={cx('hdstyles1__background')}></div>
-                        </div>
-
-                        <div className={cx('hdstyles1__anchor')}>
-                            <h3 className={cx('hdstyles1__change')}>
-                                <div
-                                    href="#"
-                                    className={cx('hdstyles1__link')}
-                                    data-panel="trending_scroller"
-                                    data-group="this-week"
-                                >
-                                    This Week <span className={cx('hdstyles1__name')}></span>
-                                </div>
+                                <div className={cx('hdstyles1__background')}></div>
                             </h3>
                         </div>
                     </div>

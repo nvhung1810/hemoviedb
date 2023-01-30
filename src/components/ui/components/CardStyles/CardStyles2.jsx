@@ -27,7 +27,7 @@ function CardStyles2() {
                                 loading="lazy"
                                 className={cx('cdstl2__backdrop')}
                                 src="https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg"
-                                srcSet="https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg 1x, /t/p/w710_and_h400_multi_faces/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg 2x"
+                                // srcSet="https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg 1x, /t/p/w710_and_h400_multi_faces/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg 2x"
                                 alt=""
                             />
 

@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import classNames from 'classnames/bind';
 import styles from './../../Main.module.scss';
-import TabUI from '~/components/ui/components/Tab/TabUI';
+import TabUI from '~/components/ui/components/Tab/_index';
 
 const cx = classNames.bind(styles);
 
@@ -11,21 +11,25 @@ function SocialOverview() {
         <div className={cx('social')}>
             <TabUI
                 header="Social"
-                listTitle={[
+                list={[
                     {
-                        id: 1,
-                        label: 'review',
-                        valueTab: '1',
-                        totalResult: 0,
-                        content: <div>We don't have any reviews for Mèo Đi Hia: Điều Ước Cuối Cùng.</div>,
+                        label: 'Reviews',
+                        total: 0,
+                        valueData: '1',
+                        content: (
+                            <div className={cx('social__title')}>
+                                We don't have any reviews for Mèo Đi Hia: Điều Ước Cuối Cùng.
+                            </div>
+                        ),
                     },
                     {
-                        id: 2,
-                        label: 'Discussions',
-                        valueTab: '2',
-                        totalResult: 4,
+                        label: 'Discussions ',
+                        total: 4,
+                        valueData: '2',
                         content: (
-                            <div>There are no discussions for Mèo Đi Hia: Điều Ước Cuối Cùng. Login to be first!</div>
+                            <div className={cx('social__title')}>
+                                There are no discussions for Mèo Đi Hia: Điều Ước Cuối Cùng. Login to be first!
+                            </div>
                         ),
                     },
                 ]}

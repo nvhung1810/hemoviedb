@@ -8,7 +8,7 @@ function MenuNav() {
         <div className={cx('nav__item--menu')}>
             <ul className={cx('menu__list')}>
                 <li className={cx('menu__item')}>
-                    <NavLink to={'movie'}>Popular</NavLink>
+                    <NavLink to={'/movie'}>Popular</NavLink>
                 </li>
                 <li className={cx('menu__item')}>Now playing</li>
                 <li className={cx('menu__item')}>Upcoming</li>
