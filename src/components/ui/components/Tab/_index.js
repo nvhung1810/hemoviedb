@@ -1,45 +1,22 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Tab from '@material-ui/core/Tab';
-import TabContext from '@material-ui/lab/TabContext';
-import TabList from '@material-ui/lab/TabList';
-import TabPanel from '@material-ui/lab/TabPanel';
+import { useState } from 'react';
+import Tab from './Tab';
+import Tabs from './Tabs';
 
-import classNames from 'classnames/bind';
-import styles from './TabUI.module.scss';
+function TabUI({ header, themeTab, list }) {
+    const [active, setActive] = useState(0);
 
-const cx = classNames.bind(styles);
-
-function TabUI({ header, list }) {
-    const [value, setValue] = React.useState('1');
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
+    const handleChange = (newActive) => setActive(newActive);
 
     return (
-        <Box sx={{ width: '100%', typography: 'body1' }} className={cx('tabUI')}>
-            <TabContext value={value}>
-                <Box>
-                    <TabList
-                        textColor="primary"
-                        indicatorColor="primary"
-                        onChange={handleChange}
-                        className={cx('tabUI__wrap')}
-                    >
-                        <div className={cx('tabUI__header')}>{header}</div>
-                        {list.map((item, index) => (
-                            <Tab key={index} label={item.label} value={item.valueData} />
-                        ))}
-                    </TabList>
-                </Box>
+        <div className="tabUI">
+            <Tabs header={header} themeTab={themeTab} active={active} onChange={handleChange}>
                 {list.map((item, index) => (
-                    <TabPanel className={cx('tabUI__tabPanel')} key={index} value={item.valueData}>
+                    <Tab key={index} title={item.title}>
                         {item.content}
-                    </TabPanel>
+                    </Tab>
                 ))}
-            </TabContext>
-        </Box>
+            </Tabs>
+        </div>
     );
 }
 

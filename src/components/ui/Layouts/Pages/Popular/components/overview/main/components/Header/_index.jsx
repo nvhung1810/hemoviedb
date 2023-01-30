@@ -46,7 +46,7 @@ function HeaderMainOverview({ listData, listCast }) {
         let resultsDataTime;
 
         timeTotal.forEach((item) => {
-            if (item.timeCompareWithCurrentTime == minTime) resultsDataTime = item.value;
+            if (item.timeCompareWithCurrentTime === minTime) resultsDataTime = item.value;
             else return;
         });
         return resultsDataTime;
