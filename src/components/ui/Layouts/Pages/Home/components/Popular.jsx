@@ -8,7 +8,7 @@ import styles from './../Home.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Trending() {
+function PopularHome() {
     const [isDataDay, setIsDataDay] = useState([]);
     const [isDataThisWeek, setIsDataThisWeek] = useState([]);
 
@@ -34,12 +34,12 @@ function Trending() {
     return (
         <div className={cx('trending')}>
             <TabUI
-                header="Trending"
+                header="What's Popular"
                 border="hasBorder"
                 themeTab="activeTabDark"
                 list={[
                     {
-                        title: <HeaderStyles1 title="Today" />,
+                        title: <HeaderStyles1 title="On TV" />,
                         content: (
                             <div className={cx('trending__content')}>
                                 {isDataDay.length === 0 ? '' : <CardStyles1 size="small" list={isDataDay} small />}
@@ -48,7 +48,7 @@ function Trending() {
                         ),
                     },
                     {
-                        title: <HeaderStyles1 title="This Week" />,
+                        title: <HeaderStyles1 title="In Theaters" />,
                         content: (
                             <div className={cx('trending__content')}>
                                 {isDataThisWeek.length === 0 ? (
@@ -66,4 +66,4 @@ function Trending() {
     );
 }
 
-export default Trending;
+export default PopularHome;

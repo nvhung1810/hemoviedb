@@ -11,11 +11,10 @@ function SocialOverview() {
         <div className={cx('social')}>
             <TabUI
                 header="Social"
+                border="noBorder"
                 list={[
                     {
-                        label: 'Reviews',
-                        total: 0,
-                        valueData: '1',
+                        title: <div className={cx('header__tabOverview')}>Reviews 0 </div>,
                         content: (
                             <div className={cx('social__title')}>
                                 We don't have any reviews for Mèo Đi Hia: Điều Ước Cuối Cùng.
@@ -23,9 +22,7 @@ function SocialOverview() {
                         ),
                     },
                     {
-                        label: 'Discussions ',
-                        total: 4,
-                        valueData: '2',
+                        title: <div className={cx('header__tabOverview')}>Discussions 4</div>,
                         content: (
                             <div className={cx('social__title')}>
                                 There are no discussions for Mèo Đi Hia: Điều Ước Cuối Cùng. Login to be first!

@@ -112,3 +112,9 @@ $height-App-main-small: 38px;
     top: -4px;
     right: 0px;
 }
+
+.progressbar__circular {
+    stroke-dasharray: 289.027px, 289.027px;
+    stroke-dashoffset: 0px;
+    stroke: rgb(32, 69, 41);
+}

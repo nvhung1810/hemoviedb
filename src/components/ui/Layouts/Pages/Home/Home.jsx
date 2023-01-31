@@ -6,6 +6,7 @@ import LatestTrailers from './components/LatestTrailers';
 import LeaderBoard from './components/Leaderboard';
 import TheBestMovie from './components/TheBest';
 import Trending from './components/Trending';
+import PopularHome from './components/Popular';
 
 const cx = classNames.bind(styles);
 
@@ -14,9 +15,12 @@ function Home() {
         <div className={cx('home')}>
             <Introduce />
             <TheBestMovie />
-            <Trending />
-            <LatestTrailers />
-            <LeaderBoard />
+            <div className={cx('home__content')}>
+                <Trending />
+                <LatestTrailers />
+                <PopularHome />
+                <LeaderBoard />
+            </div>
         </div>
     );
 }

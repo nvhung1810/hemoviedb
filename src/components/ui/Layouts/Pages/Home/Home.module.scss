@@ -109,10 +109,6 @@
 
 // Trending
 .trending {
-    &__header {
-        padding-left: 40px;
-    }
-
     &__content {
         background-image: url('https://www.themoviedb.org/assets/2/v4/misc/trending-bg-39afc2a5f77e31d469b25c187814c0a2efef225494c038098d62317d923f8415.svg');
         background-position: 50% 134px;
@@ -126,9 +122,9 @@
         position: relative;
         box-sizing: border-box;
         height: 379px;
-        padding-left: 40px;
         transition: height 0.5s linear;
         overflow-x: scroll;
+        padding-left: 40px;
         &::-webkit-scrollbar {
             width: 8px;
             height: 8px;
@@ -166,8 +162,7 @@
         background: linear-gradient(to right, rgba(var(--tmdbDarkBlue), 0.75) 0%, rgba(var(--tmdbDarkBlue), 0.75) 100%);
         width: 100%;
     }
-    &__header,
-    &__content {
+    .trailer__content {
         padding-left: 40px;
     }
 }

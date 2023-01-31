@@ -9,8 +9,11 @@ function VideoModal({ isOpen, close, keyVideo }) {
     return (
         <div>
             <div className="wrapper">
-                {keyVideo === ''} ? '' :
-                <ModalVideo chanel="youtube" isOpen={isOpen} videoId={keyVideo} onClose={close} />
+                {keyVideo === '' ? (
+                    ''
+                ) : (
+                    <ModalVideo chanel="youtube" isOpen={isOpen} videoId={keyVideo} onClose={close} />
+                )}
             </div>
         </div>
     );

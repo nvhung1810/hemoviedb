@@ -367,9 +367,20 @@
 //Social
 .social {
     border-bottom: 1px solid #ccc;
+    margin-bottom: 40px;
+    margin-bottom: 0;
     .social__title {
         font-weight: 400;
+        margin-bottom: 42px;
     }
+}
+
+.header__tabOverview {
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: center;
+    padding: 0px 12px;
+    padding-bottom: 8px;
 }
 
 // Media

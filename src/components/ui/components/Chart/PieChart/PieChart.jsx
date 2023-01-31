@@ -24,6 +24,7 @@ function PieChart({ vote_average, big = false, small = false, medium = false }) 
                         ) : (
                             <div className={cx('progressbar')}>
                                 <CircularProgressbar
+                                    className={cx('progressbar__circular')}
                                     value={vote_average * 10}
                                     styles={
                                         vote_average < 7

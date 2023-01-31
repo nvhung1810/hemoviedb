@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import moment from 'moment/moment';
-import LinkOverViewMovie, { srcImgLinkDefault, srcImgSetDefault } from '~/components/logic/linkOverviewMovie';
+import LinkOverViewMovie, { srcImgLinkDefault } from '~/components/logic/linkOverviewMovie';
 import PieChart from '../Chart/PieChart/PieChart';
 import styles from './CardStyles.module.scss';
 import { Link, useNavigate } from 'react-router-dom';
